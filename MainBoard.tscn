@@ -1,0 +1,197 @@
+[gd_scene format=3 uid="uid://d4g8me22eyek3"]
+
+[ext_resource type="Script" uid="uid://d2em57s0klca2" path="res://脚本/MainBoard.cs" id="1_ohnv3"]
+[ext_resource type="Theme" uid="uid://dtdcsy6ugpvca" path="res://样式/theme1.tres" id="1_r8ix8"]
+[ext_resource type="PackedScene" uid="uid://dkf3atvpqoaqq" path="res://CourseRow.tscn" id="2_r8ix8"]
+[ext_resource type="Texture2D" uid="uid://dbquq6gv8ojp1" path="res://样式/930a85ea9fbcccfebfafd40d9eeead5a.jpg" id="4_dmqy2"]
+[ext_resource type="Theme" uid="uid://bdy0rtpv622qj" path="res://样式/t2.tres" id="5_3jr5v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dmqy2"]
+bg_color = Color(0.99215686, 0.8039216, 0.84313726, 0.45490196)
+border_width_left = 9
+border_width_top = 9
+border_width_right = 9
+border_width_bottom = 9
+border_color = Color(0.25882354, 0.8117647, 0.9019608, 0.80784315)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3jr5v"]
+bg_color = Color(0.93333334, 0.6, 0.6, 0.3764706)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.23921569, 0.8, 0.8, 0.84705883)
+
+[node name="MainBoard" type="Control" unique_id=343692548]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_r8ix8")
+script = ExtResource("1_ohnv3")
+CourseRowPrefab = ExtResource("2_r8ix8")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1406532639]
+z_index = -3
+layout_mode = 0
+offset_top = -349.0
+offset_right = 1925.0
+offset_bottom = 1093.0
+texture = ExtResource("4_dmqy2")
+metadata/_edit_lock_ = true
+
+[node name="TitleLabel" type="Label" parent="." unique_id=409532080]
+layout_mode = 0
+offset_left = 773.0
+offset_top = 31.0
+offset_right = 1686.0
+offset_bottom = 178.0
+theme_override_colors/font_color = Color(1, 0.43529412, 0.80784315, 0.63529414)
+theme_override_font_sizes/font_size = 101
+text = "上理成绩计算器V1.0"
+horizontal_alignment = 1
+
+[node name="Header" type="HBoxContainer" parent="." unique_id=1003605222]
+layout_mode = 0
+offset_left = 752.0
+offset_top = 351.00003
+offset_right = 1120.7075
+offset_bottom = 441.4762
+scale = Vector2(1.47, 1.47)
+
+[node name="LoadButton" type="Button" parent="Header" unique_id=1664600819]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "读取配置"
+
+[node name="SaveButton" type="Button" parent="Header" unique_id=1779123473]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "保存配置"
+
+[node name="SemesterTabs" type="TabContainer" parent="." unique_id=1631321240]
+layout_mode = 0
+offset_left = 3.0
+offset_top = -11.0
+offset_right = 715.0
+offset_bottom = 1068.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dmqy2")
+current_tab = 0
+metadata/_edit_lock_ = true
+
+[node name="SemesterPanel" type="ScrollContainer" parent="SemesterTabs" unique_id=304898978]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+metadata/_tab_index = 0
+metadata/_edit_lock_ = true
+
+[node name="CourseList" type="VBoxContainer" parent="SemesterTabs/SemesterPanel" unique_id=943458214]
+custom_minimum_size = Vector2(600, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_lock_ = true
+
+[node name="AddCourseButton" type="Button" parent="." unique_id=1584948441]
+layout_mode = 0
+offset_left = 757.0
+offset_top = 506.0
+offset_right = 1044.0
+offset_bottom = 616.0
+theme_override_font_sizes/font_size = 46
+text = "添加课程"
+metadata/_edit_lock_ = true
+
+[node name="CalculationArea" type="Panel" parent="." unique_id=2086580508]
+layout_mode = 0
+offset_left = 764.0
+offset_top = 673.0
+offset_right = 1540.0
+offset_bottom = 1046.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3jr5v")
+metadata/_edit_lock_ = true
+
+[node name="TotalCreditsLabel" type="Label" parent="CalculationArea" unique_id=1258229081]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 147.0
+offset_right = 309.0
+offset_bottom = 203.0
+theme_override_font_sizes/font_size = 40
+text = "当前总学分为：0"
+
+[node name="ScoreLabel" type="Label" parent="CalculationArea" unique_id=1072440864]
+layout_mode = 0
+offset_left = 7.0
+offset_right = 103.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 40
+text = "加权均分: 0.0"
+
+[node name="GPALabel" type="Label" parent="CalculationArea" unique_id=464566385]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 75.0
+offset_right = 241.0
+offset_bottom = 131.0
+theme_override_font_sizes/font_size = 40
+text = "加权GPA: 0.0"
+
+[node name="CalculateButton" type="Button" parent="CalculationArea" unique_id=734175379]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 274.0
+offset_right = 230.0
+offset_bottom = 358.0
+theme_override_font_sizes/font_size = 40
+text = "计算结果"
+
+[node name="StatusLabel" type="Label" parent="CalculationArea" unique_id=1234240882]
+layout_mode = 0
+offset_left = -764.0
+offset_top = -673.0
+offset_right = -463.0
+offset_bottom = -576.0
+theme_override_font_sizes/font_size = 71
+
+[node name="HistoryScoreLabel" type="Label" parent="CalculationArea" unique_id=1681227951]
+layout_mode = 0
+offset_left = 415.0
+offset_top = 67.0
+offset_right = 683.0
+offset_bottom = 108.0
+theme_override_font_sizes/font_size = 40
+text = "上次均分: X.X"
+
+[node name="HistoryGPALabel" type="Label" parent="CalculationArea" unique_id=97593813]
+layout_mode = 0
+offset_left = 412.0
+offset_top = 5.0
+offset_right = 680.0
+offset_bottom = 46.0
+theme_override_font_sizes/font_size = 40
+text = "上次绩点: X.X"
+
+[node name="GrowthLabel" type="Label" parent="CalculationArea" unique_id=6745122]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 221.0
+offset_right = 952.0
+offset_bottom = 262.0
+theme_override_font_sizes/font_size = 24
+text = "均分提升: +2.0 (+2.4%) | 绩点提升: +0.1 (+2.9%)"
+
+[node name="FilePicker" type="FileDialog" parent="." unique_id=1556948472]
+oversampling_override = 1.0
+position = Vector2i(0, 36)
+theme = ExtResource("5_3jr5v")
+access = 2
+filters = PackedStringArray("*.json ; JSON 绩点存档")
+
+[connection signal="pressed" from="Header/LoadButton" to="." method="OnLoadPressed"]
+[connection signal="pressed" from="Header/SaveButton" to="." method="OnSavePressed"]

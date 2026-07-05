@@ -1,0 +1,48 @@
+[gd_resource type="Theme" format=3 uid="uid://dtdcsy6ugpvca"]
+
+[ext_resource type="FontFile" uid="uid://cq6yy0ryek2hs" path="res://字体/ChaoZiSheBeiJianFan-Shan(REEJI-CHAO-BeiMingGBT-Flash)-2.ttf" id="1_8pdl2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y64qx"]
+bg_color = Color(0.5882353, 0.5137255, 1, 0.48235294)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 2
+shadow_offset = Vector2(3, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8pdl2"]
+bg_color = Color(0.3764706, 0.9098039, 0.9764706, 0.5529412)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.9411765, 0.5529412, 0.8, 0.67058825)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0.88235295, 0.6)
+shadow_offset = Vector2(1.85, 1.7)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_68hw4"]
+bg_color = Color(0.69219095, 0.5608699, 0.58661765, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 4
+
+[resource]
+Button/colors/font_color = Color(1, 1, 0.88235295, 1)
+Button/colors/font_focus_color = Color(0.9844031, 0.932103, 0.9667459, 1)
+Button/colors/font_hover_color = Color(0.98741823, 0.816403, 3.85046e-07, 1)
+Button/font_sizes/font_size = 13
+Button/fonts/font = ExtResource("1_8pdl2")
+Button/styles/hover = SubResource("StyleBoxFlat_y64qx")
+Button/styles/normal = SubResource("StyleBoxFlat_8pdl2")
+Label/fonts/font = ExtResource("1_8pdl2")
+LineEdit/constants/minimum_character_width = 9
+LineEdit/font_sizes/font_size = 20
+LineEdit/styles/normal = SubResource("StyleBoxFlat_68hw4")

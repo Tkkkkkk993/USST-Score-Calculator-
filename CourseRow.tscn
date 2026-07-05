@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dkf3atvpqoaqq"]
+
+[ext_resource type="Script" uid="uid://b0hc2sct23sgn" path="res://脚本/CourseRow.cs" id="1_fvvp7"]
+[ext_resource type="Theme" uid="uid://dtdcsy6ugpvca" path="res://样式/theme1.tres" id="1_u87bn"]
+
+[node name="HBoxContainer" type="HBoxContainer" unique_id=656997563]
+custom_minimum_size = Vector2(0, 40)
+offset_right = 700.0
+offset_bottom = 40.0
+theme = ExtResource("1_u87bn")
+script = ExtResource("1_fvvp7")
+
+[node name="NameInput" type="LineEdit" parent="." unique_id=1313321031]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+alignment = 1
+expand_to_text_length = true
+
+[node name="CreditInput" type="LineEdit" parent="." unique_id=1036136191]
+layout_mode = 2
+placeholder_text = "学分"
+alignment = 1
+
+[node name="ScoreInput" type="LineEdit" parent="." unique_id=1522665506]
+layout_mode = 2
+placeholder_text = "成绩"
+alignment = 1
+
+[node name="DeleteButton" type="Button" parent="." unique_id=1010839801]
+custom_minimum_size = Vector2(30.005, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 18
+text = "删除"
