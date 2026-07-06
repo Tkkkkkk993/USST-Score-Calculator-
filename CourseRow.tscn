@@ -13,6 +13,7 @@ script = ExtResource("1_fvvp7")
 [node name="NameInput" type="LineEdit" parent="." unique_id=1313321031]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
+placeholder_text = "课程名"
 alignment = 1
 expand_to_text_length = true
 

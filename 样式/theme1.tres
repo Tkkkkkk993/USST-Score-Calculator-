@@ -3,21 +3,26 @@
 [ext_resource type="FontFile" uid="uid://cq6yy0ryek2hs" path="res://字体/ChaoZiSheBeiJianFan-Shan(REEJI-CHAO-BeiMingGBT-Flash)-2.ttf" id="1_8pdl2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y64qx"]
-bg_color = Color(0.5882353, 0.5137255, 1, 0.48235294)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-shadow_size = 2
-shadow_offset = Vector2(3, 3)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8pdl2"]
-bg_color = Color(0.3764706, 0.9098039, 0.9764706, 0.5529412)
+bg_color = Color(0.6509804, 0.8901961, 0.9137255, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
-border_color = Color(0.9411765, 0.5529412, 0.8, 0.67058825)
+border_color = Color(0.44313726, 0.7882353, 0.80784315, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 1
+shadow_offset = Vector2(3, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8pdl2"]
+bg_color = Color(0.6509804, 0.8901961, 0.9137255, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.44313726, 0.7882353, 0.80784315, 1)
 border_blend = true
 corner_radius_top_left = 10
 corner_radius_top_right = 10
@@ -27,7 +32,8 @@ shadow_color = Color(0, 0, 0.88235295, 0.6)
 shadow_offset = Vector2(1.85, 1.7)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_68hw4"]
-bg_color = Color(0.69219095, 0.5608699, 0.58661765, 1)
+bg_color = Color(1, 0.8862745, 0.8862745, 1)
+border_color = Color(1, 0.78039217, 0.78039217, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -43,6 +49,11 @@ Button/fonts/font = ExtResource("1_8pdl2")
 Button/styles/hover = SubResource("StyleBoxFlat_y64qx")
 Button/styles/normal = SubResource("StyleBoxFlat_8pdl2")
 Label/fonts/font = ExtResource("1_8pdl2")
+LineEdit/colors/caret_color = Color(0, 0.9490196, 0.9490196, 1)
+LineEdit/colors/font_color = Color(0.49411765, 0.8745098, 0.8745098, 1)
+LineEdit/colors/font_placeholder_color = Color(0.9529412, 0.5058824, 0.5058824, 1)
+LineEdit/colors/font_selected_color = Color(0.28627452, 1, 1, 1)
 LineEdit/constants/minimum_character_width = 9
 LineEdit/font_sizes/font_size = 20
+LineEdit/fonts/font = ExtResource("1_8pdl2")
 LineEdit/styles/normal = SubResource("StyleBoxFlat_68hw4")
